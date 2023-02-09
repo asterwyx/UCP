@@ -29,7 +29,13 @@ private:
     QAction *m_saveAsAction;
     QAction *m_closeAction;
     QAction *m_quitAction;
+    QMenu *m_editMenu;
+    QMenu *m_fontMenu;
+    QAction *m_fontColorAction;
+    QAction *m_fontAction;
     QTextEdit *m_editor;
+    QFont m_font;
+    QColor m_fontColor;
 
 private slots:
     void openFile();
@@ -38,5 +44,8 @@ private slots:
     void saveFileAs();
     void closeFile();
     void quitEditor();
+    void selectFontColor();
+    void selectFont();
+    void updateEditorFont();
 };
 #endif // MAINWINDOW_H
